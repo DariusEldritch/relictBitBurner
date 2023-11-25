@@ -1,6 +1,7 @@
 /** @param {NS} ns */
 import {relictTPrint,relictFTPCrack,relictBruteSSH,relictNuke} from "relictLib.js";
-export async function relictPorthack(ns, target) {
+export async function main(ns) {
+  var target = ns.args[0];
   var portReq = ns.getServerNumPortsRequired(target);
   if (portReq > 2) {
     relictTPrint(ns, "fuck");
